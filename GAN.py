@@ -37,8 +37,7 @@ class Generator(nn.Module):
         self.gen = nn.Sequential(self.get_hidden_block(z_dim, 1000),
                                 self.get_hidden_block(1000, 2000),
                                 self.get_hidden_block(2000, 6000),
-                                nn.Linear(6000, 28 * 28), 
-                                nn.Sigmoid())
+                                nn.Linear(6000, 28 * 28))
 
 
     def get_hidden_block(self, in_size, out_size):
